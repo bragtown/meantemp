@@ -7,7 +7,9 @@ var UserSchema = new Schema({
 	local:{
 		email:String,
 		password:String
-	}
+	},
+	org:Schema.Types.ObjectId,
+	admin:{type:Boolean}
 });
 //generates a hash
 UserSchema.methods.generateHash = function(password){

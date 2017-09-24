@@ -28,8 +28,9 @@ angular.module('publicApp')
             userObj.fName = res.data.user.fName;
             userObj.lName = res.data.user.lName;
             userObj.email = res.data.user.email;
+            userObj.org = res.data.user.org;
             userObj.isLoggedIn = true;
-            console.log(user)
+            console.log(user);
           }
           if(res.data.redirect){
             $state.go(res.data.redirect)
